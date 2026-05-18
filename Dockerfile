@@ -36,4 +36,5 @@ run echo "#!/bin/sh" > /entrypoint.sh \
 	&& echo "nohup ttyd.x86_64 --port 8082 --writable --base-path /ttyd -t enableZmodem=true -t enableTrzsz=true /usr/bin/busybox sh > /dev/null &" >> /entrypoint.sh \
 	&& echo "tail -f /dev/null" >> /entrypoint.sh \
 	&& chmod +x /entrypoint.sh
+
 entrypoint ["/bin/sh","/entrypoint.sh"]
