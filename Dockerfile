@@ -1,4 +1,4 @@
-from 192.168.13.73:5000/debian:trixie as fetch
+from debian:trixie as fetch
 run apt update
 run apt install -y aria2 curl
 run set -e \
