@@ -15,7 +15,7 @@ run mkdir /tmp/filebrowser \
         && aria2c -x 10 -j 10 -k 1M $DOWNLOAD -o linux-amd64-filebrowser.tar.gz \
         && tar -zxvf linux-amd64-filebrowser.tar.gz \
         && rm -rf linux-amd64-filebrowser.tar.gz \
-        && ln -s $(pwd)/filebrowser /opt/filebrowser
+        && cp $(pwd)/filebrowser /opt/filebrowser
 
 from scratch as busybox
 copy --from=fetch /opt/busybox /usr/bin/busybox
